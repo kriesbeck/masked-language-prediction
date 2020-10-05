@@ -1,7 +1,7 @@
 # Masked language prediction
 ### Starting from a redacted pdf, can we guess the redactions?
 
-This notebook uses the BertforMaskedLM model to predict the top 10 most likely words for a redacted token.
+This notebook uses the BertforMaskedLM model to predict the top 10 most likely words for a redacted token.  For each prediction, it outputs a probability of the predicted token in the output vector.
 
 ### Next steps
 - How to identify redactions in pdf>txt conversion?
@@ -11,11 +11,14 @@ This notebook uses the BertforMaskedLM model to predict the top 10 most likely w
   - https://stackoverflow.com/questions/61419089/use-bert-to-predict-multiple-tokens
   - How much (% of text) do we need to redact before it's difficult to predict?
 - Can we exploit the size of redaction?  number of characters?
+- Multi-token redactions
+  - https://stackoverflow.com/questions/59435020/get-probability-of-multi-token-word-in-mask-position
 
 ### Resources
 - https://arxiv.org/pdf/1706.03762.pdf 
 - https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270
 - Fine Tuning
+  - https://huggingface.co/transformers/model_doc/bert.html#bertformaskedlm
   - https://mccormickml.com/2019/07/22/BERT-fine-tuning/
 
 From the BERT paper (https://arxiv.org/pdf/1810.04805.pdf): 
